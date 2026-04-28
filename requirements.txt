@@ -1,0 +1,18 @@
+# SHARP TD Bridge - Python Dependencies
+# Install in the same conda env as SHARP (conda activate sharp)
+
+# ZMQ for real-time data transfer to TouchDesigner
+pyzmq>=25.0
+
+# PLY file handling (also a SHARP dependency)
+plyfile>=1.0
+
+# Image handling
+Pillow>=10.0
+numpy>=1.24
+
+# File watching for frame updates
+watchdog>=3.0
+
+# Logging
+coloredlogs>=15.0

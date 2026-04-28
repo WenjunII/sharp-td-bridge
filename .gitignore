@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+build/
+dist/
+
+# Project Specific
+frames/*
+!frames/.gitkeep
+splats/*
+!splats/.gitkeep
+ml-sharp/
+
+# ML/Large Files
+*.pt
+*.pth
+*.ply
+
+# IDE
+.vscode/
+.idea/
