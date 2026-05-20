@@ -11,6 +11,19 @@ Real-time 3D Gaussian Splatting pipeline for TouchDesigner. This bridge connects
 - **TouchDesigner Integration**: Ready-to-use scripts for frame exporting and splat loading.
 - **Windows Optimized**: Handles file locks and path issues common in TD environments.
 
+## AI Models & Architecture
+
+This project is built around specialized computer vision and real-time image generation models rather than Large Language Models (LLMs):
+
+1. **Apple's SHARP (Single-view Highly-adaptive 3D Reconstruction Pipeline)**:
+   - **Type**: Feedforward 3D Gaussian Splatting regression model.
+   - **Role**: The core 3D reconstruction engine that transforms a single 2D image into 3D Gaussians (XYZ, color, scale, rotation, opacity) in real-time (~2.5s).
+   - **Checkpoint**: Uses the official `sharp_2572gikvuh.pt` (2.6 GB) checkpoint.
+   
+2. **StreamDiffusionTD (Upstream Generation)**:
+   - **Type**: Real-time Latent Consistency / Stable Diffusion model.
+   - **Role**: Optionally generates dynamic, interactive 2D frames inside TouchDesigner, which are exported and fed directly into the SHARP bridge.
+
 ## Installation
 
 ### 1. Prerequisites
